@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold text-[#3B2C35] tracking-wide drop-shadow-lg">Chess Club</h1>
         </div>
         <nav className="flex gap-8 mt-4 w-full justify-center text-lg font-semibold">
-          <a href="/" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Home</a>
+          <Link href="/" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Home</Link>
           <a href="/about" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">About Us</a>
           <a href="/contact" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Contact Info</a>
         </nav>

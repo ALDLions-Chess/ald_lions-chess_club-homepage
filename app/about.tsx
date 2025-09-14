@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white text-black flex flex-col font-sans">
@@ -9,7 +11,7 @@ export default function About() {
           <h1 className="text-5xl font-extrabold text-black tracking-wide drop-shadow-lg">Chess Club</h1>
         </div>
         <nav className="flex gap-8 mt-4 w-full justify-center text-lg font-semibold">
-          <a href="/" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Home</a>
+          <Link href="/" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Home</Link>
           <a href="/about" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">About Us</a>
           <a href="/contact" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Contact Info</a>
         </nav>
@@ -23,7 +25,7 @@ export default function About() {
           </div>
           <div className="flex flex-col md:flex-row-reverse items-center gap-4">
             <div className="w-32 h-32 bg-black rounded-lg flex-shrink-0 mb-2 md:mb-0"></div>
-            <p className="flex-1 text-lg">Join us for tournaments, lessons, and fun activities. Whether you're a beginner or a seasoned player, there's a place for you here!</p>
+            <p className="flex-1 text-lg">Join us for tournaments, lessons, and fun activities. Whether you&apos;re a beginner or a seasoned player, there&apos;s a place for you here!</p>
           </div>
         </div>
       </main>

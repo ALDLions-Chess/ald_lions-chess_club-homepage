@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-white text-black flex flex-col font-sans">
@@ -9,9 +11,9 @@ export default function Contact() {
           <h1 className="text-5xl font-extrabold text-black tracking-wide drop-shadow-lg">Chess Club</h1>
         </div>
         <nav className="flex gap-8 mt-4 w-full justify-center text-lg font-semibold">
-          <a href="/" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Home</a>
-          <a href="/about" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">About Us</a>
-          <a href="/contact" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Contact Info</a>
+          <Link href="/" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Home</Link>
+          <Link href="/about" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">About Us</Link>
+          <Link href="/contact" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Contact Info</Link>
         </nav>
       </header>
       <main className="flex flex-col items-center p-8 gap-8">
