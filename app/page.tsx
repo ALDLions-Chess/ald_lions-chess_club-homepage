@@ -7,14 +7,14 @@ export default function Home() {
       {/* Header */}
       <header className="w-full flex flex-col items-center border-b-4 border-[#FFC857] bg-[#FFC857] pb-2">
         <div className="flex items-center gap-4 mt-4">
-          {/* Replace text logo with image logo */}
+          {/* Logo Image */}
           <div className="rounded-full border-4 border-[#3B2C35] w-14 h-14 flex items-center justify-center bg-[#2A1F2D] overflow-hidden">
             <Image
-              src="/public/images/Aldershot_logo.png"
+              src="/images/Aldershot_Logo.png"
               alt="ALD Lions Logo"
               width={56}
               height={56}
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", width: "56px", height: "56px" }}
             />
           </div>
           <h1 className="text-5xl font-extrabold text-[#3B2C35] tracking-wide drop-shadow-lg">Chess Club</h1>

@@ -1,12 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[#214E34] text-white flex flex-col font-sans">
       <header className="w-full flex flex-col items-center border-b-4 border-[#FFC857] bg-[#FFC857] pb-2">
         <div className="flex items-center gap-4 mt-4">
-          <div className="rounded-full border-4 border-[#3B2C35] w-14 h-14 flex items-center justify-center text-center text-xs font-bold text-[#FFC857] bg-[#2A1F2D]">
-            <span>ALD<br/>Lions</span>
+          {/* Logo Image */}
+          <div className="rounded-full border-4 border-[#3B2C35] w-14 h-14 flex items-center justify-center bg-[#2A1F2D] overflow-hidden">
+            <Image
+              src="/images/Aldershot_Logo.png"
+              alt="ALD Lions Logo"
+              width={56}
+              height={56}
+              style={{ objectFit: "cover", width: "56px", height: "56px" }}
+            />
           </div>
           <h1 className="text-5xl font-extrabold text-[#3B2C35] tracking-wide drop-shadow-lg">Chess Club</h1>
         </div>
