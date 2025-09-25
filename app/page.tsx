@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -6,15 +7,30 @@ export default function Home() {
       {/* Header */}
       <header className="w-full flex flex-col items-center border-b-4 border-[#FFC857] bg-[#FFC857] pb-2">
         <div className="flex items-center gap-4 mt-4">
-          <div className="rounded-full border-4 border-[#3B2C35] w-14 h-14 flex items-center justify-center text-center text-xs font-bold text-[#FFC857] bg-[#2A1F2D]">
-            <span>ALD<br/>Lions</span>
+          {/* Replace text logo with image logo */}
+          <div className="rounded-full border-4 border-[#3B2C35] w-14 h-14 flex items-center justify-center bg-[#2A1F2D] overflow-hidden">
+            <Image
+              src="/public/images/Aldershot_logo.png"
+              alt="ALD Lions Logo"
+              width={56}
+              height={56}
+              style={{ objectFit: "cover" }}
+            />
           </div>
           <h1 className="text-5xl font-extrabold text-[#3B2C35] tracking-wide drop-shadow-lg">Chess Club</h1>
         </div>
         <nav className="flex gap-8 mt-4 w-full justify-center text-lg font-semibold">
           <Link href="/" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Home</Link>
-          <a href="/about" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">About Us</a>
-          <a href="/contact" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Contact Info</a>
+          <Link href="/about" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">About Us</Link>
+          <Link
+            href="https://lichess.org/learn#/lessons"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition"
+          >
+            Lessons
+          </Link>
+          <Link href="/contact" className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">Contact Info</Link>
         </nav>
       </header>
 
@@ -35,8 +51,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Right: Empty for now */}
-        <section className="flex-1 flex flex-col gap-8"></section>
+        {/* Right: Daily Chess Puzzle */}
+        <section className="flex-1 bg-[#2A1F2D] rounded-xl shadow-lg p-6 flex flex-col border-2 border-[#FFC857]">
+          <h2 className="text-2xl font-bold text-[#FFC857] mb-4">Daily Chess Puzzle</h2>
+          <div className="flex-1 flex items-center justify-center bg-[#3B2C35] rounded-lg min-h-[250px]">
+            <div className="w-full flex justify-center">
+              <iframe
+                src="https://lichess.org/training/frame?theme=blue"
+                width="100%"
+                height="400"
+                style={{ maxWidth: 400, minWidth: 250 }}
+                className="rounded-lg"
+                title="LiChess Daily Puzzle"
+              ></iframe>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Previous Tournament Standings */}
@@ -52,9 +82,6 @@ export default function Home() {
         <div className="flex gap-8">
           <a href="https://classroom.google.com/c/NTAwOTQ3NDk0OTUz?cjc=tvlxdn6" target="_blank" rel="noopener noreferrer" className="w-32 h-32 bg-[#FFC857] text-[#2A1F2D] rounded-lg flex items-center justify-center font-bold text-center shadow-lg border-4 border-[#3B2C35] hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">
             Google<br/>Classroom
-          </a>
-          <a href="https://lichess.org/team/ald-lions-chess-club" target="_blank" rel="noopener noreferrer" className="w-32 h-32 bg-[#FFC857] text-[#2A1F2D] rounded-lg flex items-center justify-center font-bold text-center shadow-lg border-4 border-[#3B2C35] hover:bg-[#2FBF71] hover:text-[#3B2C35] transition">
-            LiChess<br/>ALD-Lions<br/>Chess Club
           </a>
         </div>
       </section>

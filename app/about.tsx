@@ -12,8 +12,16 @@ export default function About() {
         </div>
         <nav className="flex gap-8 mt-4 w-full justify-center text-lg font-semibold">
           <Link href="/" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Home</Link>
-          <a href="/about" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">About Us</a>
-          <a href="/contact" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Contact Info</a>
+          <Link href="/about" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">About Us</Link>
+          <Link
+            href="https://lichess.org/learn#/lessons"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1 rounded hover:bg-[#2FBF71] hover:text-[#3B2C35] transition"
+          >
+            Lessons
+          </Link>
+          <Link href="/contact" className="px-4 py-1 rounded hover:bg-black hover:text-gold transition">Contact Info</Link>
         </nav>
       </header>
       <main className="flex flex-col items-center p-8 gap-8">
