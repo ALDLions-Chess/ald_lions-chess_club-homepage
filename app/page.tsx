@@ -10,7 +10,7 @@ export default function Home() {
           {/* Logo Image */}
           <div className="rounded-full border-4 border-[#3B2C35] w-14 h-14 flex items-center justify-center bg-[#2A1F2D] overflow-hidden">
             <Image
-              src="/images/Aldershot_Logo.png"
+              src="/images/aldershot_logo.png"
               alt="ALD Lions Logo"
               width={56}
               height={56}
