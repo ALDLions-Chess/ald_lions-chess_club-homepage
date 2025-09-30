@@ -1,20 +1,6 @@
 import Link from "next/link";
 
-/**
- * Returns the correct image src for GitHub Pages or local.
- * Adds '/repo-name' prefix if running on GitHub Pages.
- */
-function getImageSrc(src: string) {
-  if (typeof window !== "undefined") {
-    const { hostname, pathname } = window.location;
-    const repo = "ald-chess_club-homepage";
-    if (hostname.endsWith("github.io") && pathname.startsWith(`/${repo}`)) {
-      return `/${repo}${src}`;
-    }
-  }
-  return src;
-}
-
+// Contact page component
 export default function Contact() {
   return (
     // Responsive main container
