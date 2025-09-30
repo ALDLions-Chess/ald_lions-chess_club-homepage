@@ -24,18 +24,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Set favicon path with repo prefix for GitHub Pages (static, SSR-safe)
-  const repo = "ald-chess_club-homepage";
-  const faviconPath =
-    typeof window !== "undefined" && window.location.hostname.endsWith("github.io")
-      ? `/${repo}/images/aldershot_logo.png`
-      : "/images/aldershot_logo.png";
-
   return (
     <html lang="en">
       <head>
-        {/* Favicon for browser tab, supports GitHub Pages subdirectory */}
-        <link rel="icon" href={faviconPath} type="image/png" />
+        {/* Remove favicon link using image src */}
       </head>
       {/* Main body with custom fonts */}
       <body
