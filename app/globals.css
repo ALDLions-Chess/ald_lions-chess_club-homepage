@@ -1,12 +1,30 @@
+/* Tailwind base styles */
 @tailwind base;
+/* Tailwind component classes */
 @tailwind components;
+/* Tailwind utility classes */
 @tailwind utilities;
 
+/* Root color variables for light mode */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-size: 16px;
 }
 
+@media (max-width: 640px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* Override color variables for dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -14,6 +32,7 @@
   }
 }
 
+/* Global body styles */
 body {
   color: var(--foreground);
   background: var(--background);
