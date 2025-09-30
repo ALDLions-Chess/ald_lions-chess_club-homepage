@@ -58,9 +58,9 @@ export default function Home() {
             <div className="w-full flex justify-center">
               <iframe
                 src="https://lichess.org/training/frame?theme=blue"
-                width="100%"
-                height="300"
-                style={{ maxWidth: 400, minWidth: 200 }}
+                width="350"
+                height="350"
+                style={{ maxWidth: 350, minWidth: 250 }}
                 className="rounded-lg"
                 title="LiChess Daily Puzzle"
               ></iframe>
