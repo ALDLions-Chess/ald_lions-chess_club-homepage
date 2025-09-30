@@ -24,19 +24,9 @@ export default function Home() {
   return (
     // Responsive main container
     <div className="min-h-screen bg-[#214E34] text-white flex flex-col font-sans">
-      {/* Header with logo and navigation */}
+      {/* Header with title and navigation */}
       <header className="w-full flex flex-col items-center border-b-4 border-[#FFC857] bg-[#FFC857] pb-2">
         <div className="flex items-center gap-2 sm:gap-4 mt-4">
-          {/* Club logo image */}
-          <div className="rounded-full border-4 border-[#3B2C35] w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-[#2A1F2D] overflow-hidden">
-            <Image
-              src={getImageSrc("/images/aldershot_logo.png")}
-              alt="ALD Lions Logo"
-              width={56}
-              height={56}
-              style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            />
-          </div>
           {/* Club title */}
           <h1 className="text-3xl sm:text-5xl font-extrabold text-[#3B2C35] tracking-wide drop-shadow-lg">Chess Club</h1>
         </div>
